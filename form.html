@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="form.css"> 
+</head>
+<body>
+
+    <h1>Leave a Comment</h1>
+
+    <div class="container">
+        <form id="feedbackform" name="feedbackform">
+            <fieldset>
+                <legend> FeedBack Form </legend>
+                    <div class="input-control">
+                        <label for="name"> Enter Full Name </label>
+                        <input type="text" id="name" name="name"  placeholder="enter full name"  required>
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="email"> Enter Email Id </label>
+                        <input type="email" id="email" name="email" placeholder="enter email id"  required>
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="comment"> Enter comment </label>
+                        <input type="text" id="comment" name="text" placeholder="enter comment"  required>
+                        <div class="error"></div>
+                    </div>  
+                    
+                    
+                    <input id="submit" type="submit"></input>
+                
+            </fieldset>
+        </div>
+    
+        
+
+
+    </form>
+<script src="form.js"></script>   
+</body>
+
+</html>

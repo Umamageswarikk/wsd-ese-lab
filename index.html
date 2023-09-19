@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dogs</title>
+  </head>
+  <body>
+    <h1>Fetch Random Dog Images Using Dog API</h1>
+    <button id="dogImage" type="button">
+        Fetch Dog Image
+      </button>
+    </div>
+  </div>
+  <div id="dogList"></div>
+  
+  <script>
+
+   
+const httpRequest = new XMLHttpRequest();
+const url =
+  'https://dog.ceo/api/breeds/image/random';
+document.getElementById('dogImage').addEventListener('click', () => {
+  makeRequest(url);
+});
+
+function makeRequest(url) {
+  httpRequest.onreadystatechange = alertContents;
+  httpRequest.open('GET', url, true);
+  httpRequest.send();
+}
+
+function alertContents() {
+  if (httpRequest.readyState === XMLHttpRequest.DONE) {
+    if (httpRequest.status === 200) {
+      const response = JSON.parse(httpRequest.responseText);
+      console.log(response);
+      response.map( 
+        (dog) =>
+          (document.getElementById(
+            'dogList'
+          ).innerHTML += `<img src="${dog.imageLink}">
+
+        <h3>${dog.Breed}</h3>
+        <p>${dog.country}</p>
+        <p>${dog.color}</p>
+        `)
+      );
+    } else {
+      alert('There was a problem with the request.');
+    }
+  }
+}
+
+console.log('hello', httpRequest.responseText);
+  </script>
+  </body>
+  </html>
+

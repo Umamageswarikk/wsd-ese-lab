@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Dog category ="Details">
+    <Dog1>
+        <Details Type="Canine_Details">
+            <Breed>"Golden Retriever"</Breed>
+            <color>"Golden"</color>
+            <country>"United_states"</country>
+        </Details>    
+    </Dog1>
+    <Dog2>
+        <Details Type="Canine_Details">
+            <Breed>"German Sheperd"</Breed>
+            <color>"Black"</color>
+            <country>"Germany"</country>
+        </Details>        
+    </Dog2>
+    <Dog3>
+        <Details Type="Canine_Details">
+            <Breed>"Poodle color"</Breed>
+            <color>"White"</color>
+            <country>"France"</country>
+        </Details>        
+    </Dog3>
+    <Dog4>
+        <Details Type="Canine_Details">
+            <Breed>"Bull dog"</Breed>
+            <color>"Brindle"</color>
+            <country>"United_kingdom"</country>
+        </Details>        
+    </Dog4>
+</Dog>
